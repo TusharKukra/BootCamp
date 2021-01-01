@@ -76,4 +76,45 @@ int main(){
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Lower to upper and upper to lowercase 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+    void toggleStringCase(string& s){
+
+        int length = s.length();
+        for(int i=0;i<length;i++){
+            
+            int c = s[i];
+
+            if(islower(c)){
+                s[i] = toupper(c);  // this means if our character is in lowercase then convert it into Uppercase
+            }
+
+            else if (isupper(c)){
+                s[i] = tolower(c);  // this means if our character is in uppercase then convert it into lowercase
+            }
+        
+        }
+    }
+    
+    
+    int main(){
+
+        string s ;
+        
+        getline(cin,s);
+
+        toggleStringCase(s);
+
+        cout<<s;
+
+    
+    
+    return 0;
+}
