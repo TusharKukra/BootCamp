@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
-// 1 Half Pyramid of * 
+// 1. Half Pyramid of * 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -27,7 +27,7 @@ int main() {
 
 //////////////////////////////////////////////////////////////////////////////////
 
-// 2 Half Pyramid of Numbers 
+// 2. Half Pyramid of Numbers 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -54,7 +54,7 @@ int main() {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// 3 Half Pyramid of Alphabets
+// 3. Half Pyramid of Alphabets
 
 
 #include<bits/stdc++.h>
@@ -85,5 +85,128 @@ int main() {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// 3 Inverted Half Pyramid of *
+// 4. Inverted Half Pyramid of *
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    // Inverted half pyramid of *
+
+    for(int i=rows ; i>=1 ; i--){
+
+        for(int j=1;j<=i;j++){
+            
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// 5. Inverted Half Pyramid of Numbers
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows,a=1;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    // Inverted half pyramid of Numbers
+
+    for(int i=rows ; i>=1 ; i--){
+
+        for(int j=1;j<=i;j++){
+            
+            cout<<a++<<" ";
+        }
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// 6. Inverted Half Pyramid of Characters
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows;
+    char a = 'A';
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i=rows;i>=1;i--){
+
+        for(int j=1;j<=i;j++){
+
+            cout<<a++<<" ";
+        }
+
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// 7. Half Pyramid of Same Numbers
+
+eg: 
+1
+1 2
+1 2 3
+1 2 3 4
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows,a=1;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i=1;i<=rows;i++){
+
+        a=1;
+        
+        for(int j=1;j<=i;j++){
+
+            cout<<a++<<" ";
+        }
+
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// 8. Half Pyramid Numbers
 
