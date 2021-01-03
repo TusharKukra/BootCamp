@@ -210,3 +210,113 @@ int main()
 
 // 8. Half Pyramid Numbers
 
+eg:
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows,a=0;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i=1;i<=rows;i++){
+
+        a=a+1;
+
+        for(int j=1;j<=i;j++){
+
+            cout<<a<<" ";
+        }
+
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// 9. Half Pyramid Fibonacci Numbers
+
+eg:
+1
+1 2
+1 2 3
+1 2 3 5
+1 2 3 5 8
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows,a=0,b=1,c;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i=1;i<=rows;i++){
+
+        a=0; b=1;
+
+        for(int j=1;j<=i;j++){
+
+            c=a+b;
+            cout<<c<<" ";
+            a=b;
+            b=c;
+        }
+
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// 10. Half Pyramid Fibonacci Numbers
+
+eg:
+1
+2 3
+5 8 13
+21 34 55 89
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rows,a=0,b=1,c;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i=1;i<=rows;i++){
+
+        
+    
+        for(int j=1;j<=i;j++){
+
+            c=a+b;
+            cout<<c<<" ";
+            a=b;
+            b=c;
+        }
+
+        cout<<endl;
+    }
+    
+    return 0;
+}
