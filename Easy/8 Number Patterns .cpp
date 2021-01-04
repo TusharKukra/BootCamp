@@ -378,6 +378,15 @@ int main(){
 
 // 12. Full Triangle of * 
 
+eg:
+
+          *
+         * *
+        * * *
+       * * * *
+      * * * * *
+     * * * * * *
+
 
 #include<bits/stdc++.h>
 
