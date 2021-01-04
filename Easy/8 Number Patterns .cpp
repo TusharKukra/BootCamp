@@ -328,6 +328,11 @@ int main()
 
 eg:
 
+      *
+    * *
+  * * *
+* * * *
+
 #include<bits/stdc++.h>
 
 using namespace std;
