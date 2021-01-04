@@ -373,3 +373,50 @@ int main(){
 }
 
 
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// 12. Full Triangle of * 
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+
+    int row,a=0,b=1,c;
+    cin>>row;
+
+    int k = 2 * row - 2;
+ 
+    // Outer loop to handle number of rows
+    // n in this case
+    for (int i = 0; i < row; i++) {
+ 
+        // Inner loop to handle number spaces
+        // values changing acc. to requirement
+        for (int j = 0; j < k; j++)
+            cout << " ";
+ 
+        // Decrementing k after each loop
+        k = k - 1;
+ 
+        // Inner loop to handle number of columns
+        // values changing acc. to outer loop
+        
+        for (int j = 0; j <= i; j++) {
+            
+            // Printing stars
+            cout << "* ";
+        }
+ 
+        // Ending line after each row
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+
