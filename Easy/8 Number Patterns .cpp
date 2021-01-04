@@ -326,6 +326,8 @@ int main()
 
 // 11. Right Half Pyramid of * 
 
+eg:
+
 #include<bits/stdc++.h>
 
 using namespace std;
