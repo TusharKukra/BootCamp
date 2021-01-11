@@ -1,3 +1,5 @@
+// Method -1 (using Basics)
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,3 +20,7 @@ int main(){
 
      return 0;
 }
+
+
+// Method -2 (using STL and String)
+
