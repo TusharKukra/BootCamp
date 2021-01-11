@@ -1,13 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void LinearSearch(int a[], int n, int key){
+int LinearSearch(int a[], int n, int key){
 
      for(int i=0;i<n;i++){
           if(a[i]==key){
-               cout<<"Position of key value is : "<<i+1;
+               return i+1;
           }
+          
      }
+     return -1;
 
 
 }
@@ -18,7 +20,14 @@ int main(){
      int n = sizeof(arr)/sizeof(int);
      int key = 50;
 
-     LinearSearch(arr,n,key);
+     int result = LinearSearch(arr,n,key);
+
+     if(result == -1){
+          cout<<"Key Not Found !!!";
+     }
+     else{
+          cout<<"Key found at Position : "<<result;
+     }
 
      return 0;
 }
