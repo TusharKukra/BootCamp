@@ -24,3 +24,18 @@ int main(){
 
 // Method -2 (using STL and String)
 
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+     string s;
+     getline(cin,s);
+     
+     reverse(s.begin(),s.end());
+
+     cout<<endl<<s;
+
+
+     return 0;
+}
