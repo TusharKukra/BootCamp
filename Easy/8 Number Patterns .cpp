@@ -427,5 +427,29 @@ int main(){
     return 0;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 13. Triangle Example: 
+	1
+	2 3
+	4 5 6
+	7 8 9 10
+	11 12 13 14 15
 
+#include <iostream>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	int row=1,col,val=1;
+	while(row<=n){
+		col=1;
+		while(col<=row){
+			cout<<val++<<" ";
+			col++;
+		}
+		cout<<endl;
+		row++;
+	}
 
+    return 0;
+}
