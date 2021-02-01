@@ -1,3 +1,26 @@
+//Method -1 (without using Array)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n, number, max = INT_MIN;
+    cin>>n;
+
+    int i =1;
+    while(i<=n){
+        cin>>number;
+        if(number>max){
+            max = number;
+        }
+        i++;
+    }
+    cout<<max<<endl;
+
+    return 0;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Method-2
 #include <bits/stdc++.h>
