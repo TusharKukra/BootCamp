@@ -118,3 +118,38 @@ using namespace std;
     
     return 0;
 }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+#include<iostream>
+using namespace std;
+
+//Toggle Case in Character
+
+int main(){
+
+    char ch;
+    cin>>ch;
+
+    //using ascii codes
+
+    int a = ch;
+    cout<<ch<<" "<<a<<endl;
+
+    //To convert or toggle cases
+
+    if(a >= 97 && a <= 122){
+        //for smaller characters
+        ch = a-32;
+        cout<<"Uppercase : "<<ch<<endl;
+    }
+
+    else{
+
+        // for Capital Characters
+        ch = a + 32;
+        cout<<"Lowercase : "<<ch<<endl;
+    }
+
+    return 0;
+}
