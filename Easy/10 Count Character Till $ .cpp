@@ -23,3 +23,25 @@ int main()
 
      return 0;
 }
+
+//////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int main() {
+
+//Count till $ Sign
+
+char ch;
+int count = 0;
+
+//cin>>ch ; // cin ignores white spaces and new line so we use cin.get()
+ch = cin.get();
+while(ch != '$'){
+    count++;
+
+    ch=cin.get(); //if $ sign occur then move to the next character
+}
+cout<<"Total Characters : "<<count<<endl;
+
+return 0;
+}
