@@ -32,3 +32,38 @@ int main(){
      printArray;
      return 0;
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+// Bubble Sort
+
+int main(){
+
+    int arr[5] = {5,4,3,2,1};
+    int n = sizeof(arr)/sizeof (int);
+
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+    //Bubble Sort Logic (compare consecutive elements and swap them accordingly)
+ 
+    for(int i=0;i<n-1;i++){  // there will be total n-1 comparisions
+        for(int j=0;j<n-i-1;j++){  // after every comparision one element got its place now do comparision of remaining elements
+            swap(arr[j], arr[j+1]);             
+        }
+    }
+
+    // print sorted array
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+
+    return 0;
+}
