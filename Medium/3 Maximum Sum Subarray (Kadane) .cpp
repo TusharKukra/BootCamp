@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// Kadane Algorithm
+
 int main(){
  
  int a[100001];
@@ -12,7 +14,7 @@ int main(){
    cin>>a[i];
  
  } 
-  
+ 
  
   
   
