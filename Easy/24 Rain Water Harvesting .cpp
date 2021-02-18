@@ -1,3 +1,6 @@
+// how much litres of water will be stored in between the buildings
+
+
 #include<iostream>
 using namespace std;
 int main() 
