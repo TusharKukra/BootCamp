@@ -1,3 +1,25 @@
+// Statement : 
+Given a string ‘str’ of digits, find the length of the longest substring of ‘str’, such that the length of the substring is 2k digits and sum of left k digits is equal to the sum of right k digits.
+
+Input Format
+The first line of input contains an integer T denoting the number of test cases Each test case contains a string string of length N.
+
+Constraints
+
+Output Format
+Print length of the longest substring of length 2k such that sum of left k elements is equal to right k elements and if there is no such substring print 0.
+
+Sample Input
+1
+1538023
+Sample Output
+4
+
+
+
+/////////////////////////////////////////////////////////
+//Code: 
+
 #include<iostream>
 #include<cstring>
 using namespace std;
