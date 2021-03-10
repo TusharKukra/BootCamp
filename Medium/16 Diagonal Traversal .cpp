@@ -1,5 +1,7 @@
 // Diagonal Traversal of a Matrix (Zig-Zag)
+// Method -1
 // Time Complexity : O(n*m)
+
 #include <iostream> 
 using namespace std; 
 #define C 3 
@@ -113,3 +115,6 @@ int main()
   
     return 0; 
 } 
+
+
+//Method -2
