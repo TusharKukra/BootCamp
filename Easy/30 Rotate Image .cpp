@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void rotateWithoutSTL(int a[][1000], int n){
+void RotateMatrix(int a[][1000], int n){
 
     // for doing reverse of the each rows
     for(int row=0; row<n; row++){
@@ -41,7 +41,7 @@ int main(){
         }
     }
 
-    rotateWithoutSTL(a,n);
+    RotateMatrix(a,n);
 
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
