@@ -45,11 +45,11 @@ int main(){
     int n;
     cin>>n;
     if(n%2!=0){
-    odd(n);
-    even(2,n);
+         odd(n);
+         even(2,n);
     }
     else{
          odd(n-1);
-    even(2,n);
+         even(2,n);
     }
 }
