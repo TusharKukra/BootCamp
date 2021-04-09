@@ -48,3 +48,14 @@ using namespace std;
 
 // it will check X -> (3^19) % X == 0.
 
+
+int main(){
+
+    int y = pow(3,19);
+    cout<<y<<endl;
+
+    int z = pow(3,20);
+    cout<<z<<endl; // this will give us Integer overflow
+
+    return 0;
+}
