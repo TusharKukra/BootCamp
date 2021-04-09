@@ -112,3 +112,38 @@ int main(){
 
 //Method -3 (Sliding Window -Efficient Approach)
 
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    string str;
+    cin>>str;
+
+    int visited[256];
+    for(int i=0;i<256;i++){
+        visited[i] = -1; //firstly put it -1 then update it to 0
+    }
+
+    visited[str[0]]=0;
+    int cur_len=1;
+    int max_len=1;
+
+    int n = str.size(); 
+    for(int i=1;i<n;i++){
+        int last_occurrence = visited[str[i]];
+        if(last_occurrence == -1 || last_occurrence < i-cur_len){
+            //expand the window
+            cur_len++;
+        }
+        else{
+            //shrink the window
+            cur_len = i-last_occurrence;
+        }
+        visited[str[i]] = i;
+        max_len = max(max_len,cur_len);
+    }
+    cout<<max_len<<endl;
+
+    return 0;
+}
