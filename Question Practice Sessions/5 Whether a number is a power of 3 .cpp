@@ -30,3 +30,7 @@ int main(){
 
     return 0;
 }
+
+
+
+// Method -2 (using O(1) Time Complexity)
