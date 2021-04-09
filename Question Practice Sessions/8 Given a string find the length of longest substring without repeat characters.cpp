@@ -1,3 +1,5 @@
+//Method -1
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -28,6 +30,8 @@ int main(){
     int n = str.length(); //str.size()
     int max_len=0;
 
+    int left =0,right =0;
+
     // i iterates over all the starting points of the substring
     for(int i=0;i<n;i++){
 
@@ -37,10 +41,28 @@ int main(){
             // str[i......j]
             if(hasUniqueCharacters(str, i , j)){
                 int length = j-i+1;
-                max_len = max(max_len, length);
+                if(length>max_len){
+                    max_len=length;
+                    left=i;
+                    right=j;
+                }
+                // max_len = max(max_len, length);
             }
         }
     }
     cout<<max_len<<endl;
+    for(int k=left;k<=right;k++){
+        cout<<str[k]<<"";
+    }
+    cout<<endl;
     return 0;
 }
+
+
+//Method -2 (Sliding Window -Approach-1)
+
+
+
+
+//Method -3 (Sliding Window -Efficient Approach)
+
