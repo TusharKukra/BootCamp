@@ -34,3 +34,17 @@ int main(){
 
 
 // Method -2 (using O(1) Time Complexity)
+// this method may or may not work (no guarantee)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// Method -2 (using integer Overflow)
+// In this method , we find the maximum integer which is a power of 3 (Y)
+// Y % X == 0
+
+// bcoz 3^19 < INT_MAX , so thats why its a integer overflow method which may or may not work
+// it will not work value 3^20 or greater.
+
+// it will check X -> (3^19) % X == 0.
+
