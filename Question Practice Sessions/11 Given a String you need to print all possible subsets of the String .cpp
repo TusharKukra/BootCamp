@@ -4,6 +4,15 @@ using namespace std;
 
 void generateSubset (char* inp, char* out, int i, int j){
 
+    // am i standing at the null character / or have i reached the end of the input array
+    
+    if(inp[i]=='\0'){  // this is the base case of RECURSION
+        // terminate and print the output
+        out[j] = '\0';
+        cout<<out<<endl;
+        return;
+    }
+    
     // i am standing at the ith character of the input array and I have to make a decision
     
 
