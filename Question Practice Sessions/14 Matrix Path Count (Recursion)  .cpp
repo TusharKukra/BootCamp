@@ -7,7 +7,7 @@ using namespace std;
 
 // we have to count the number of paths that can take us from top-left cell to the bottom-left cell.
 
-int countPaths(int i, int j, int n, int m){
+int countPathsTopToBottom(int i, int j, int n, int m){
 
     //base case:
     if(i==n-1 && j==m-1){
@@ -25,10 +25,37 @@ int countPaths(int i, int j, int n, int m){
     // I am standing at the (i,j) cell of the matrix & i have to make a decision.
 
     // 1. Go right 
-    int X = countPaths(i,j+1,n,m);
+    int X = countPathsTopToBottom(i,j+1,n,m);
 
     // 2. Go down
-    int Y = countPaths(i+1,j,n,m);
+    int Y = countPathsTopToBottom(i+1,j,n,m);
+
+    return X+Y;
+
+}
+
+int countPathsBottomToTop(int n, int m){
+
+    //base case:
+    if(n==0 && m==0){
+
+        // I have found a path from TL->BR
+        return 1;
+    }
+
+    //another base case for Out of Bound Error
+    if(n<0 or m<0){
+        // I have gone out of bound
+        return 0;  // bcoz max values are n-1, m-1. So, if we go beyond any of them then it will be OOB error
+    }
+
+    // I am standing at the (i,j) cell of the matrix & i have to make a decision.
+
+    // 1. Go left
+    int X = countPathsBottomToTop(n,m-1);
+
+    // 2. Go up
+    int Y = countPathsBottomToTop(n-1,m);
 
     return X+Y;
 
@@ -42,8 +69,9 @@ int main(){
     int m; //columns
     cin>>m;
 
-    cout<<countPaths(0,0,n,m)<<endl; //0,0,n-1,m-1 are the starting and ending points (extreme points)
+    cout<<countPathsTopToBottom(0,0,n,m)<<endl; //0,0,n-1,m-1 are the starting and ending points (extreme points)
 
+    cout<<countPathsBottomToTop(n-1, m-1)<<endl;
     return 0;
 }
 
