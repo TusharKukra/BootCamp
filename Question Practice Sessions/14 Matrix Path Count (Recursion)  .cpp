@@ -42,7 +42,7 @@ int main(){
     int m; //columns
     cin>>m;
 
-    cout<<countPaths(0,0,n-1,m-1)<<endl; //0,0,n-1,m-1 are the starting and ending points (extreme points)
+    cout<<countPaths(0,0,n,m)<<endl; //0,0,n-1,m-1 are the starting and ending points (extreme points)
 
     return 0;
 }
