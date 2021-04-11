@@ -20,3 +20,6 @@ Input : aabb
 Output : {2,4}
 
 */
+
+
+//Code : 
