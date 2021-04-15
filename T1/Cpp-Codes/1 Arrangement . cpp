@@ -64,12 +64,15 @@ int main(){
             j++;
             evenFlag = true;  // here we just toggle the flag so that we can print even next 
         }
-    }
-
-    // print the pattern
-    for(int k=0;k<n;k++){
+        
+        // print the pattern
+        
+        for(int k=0;k<n;k++){
         cout<<arr[k]<<" ";
     }
+    }
+
+    
 
     return 0;
 }
