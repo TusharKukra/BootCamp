@@ -1,0 +1,75 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+/*
+Given an Array of integer [both odd & even], the task is to arrange then
+in such a way that odd and even values come in alternate fashion
+in non-decreasing order [icreasing] respectively.
+
+If the smallest value is Even then we have to print Even-Odd pattern
+If the smallest value is Odd then we have to print Odd-Even pattern.
+*/
+
+int main(){
+
+    int n;
+    cin>>n;
+
+    int* arr = new int[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    // 1. Sort the array
+    sort(arr, arr+n);
+
+    // 2. Create 2 vectors : Even-Vector & Odd-Vector
+    vector<int> even;
+    vector<int> odd;
+
+    for(int i=0;i<n;i++){
+        if(arr[0]%2==0){
+            even.push_back(arr[i]);
+        }
+        else{
+            odd.push_back(arr[i]);
+        }
+    }
+
+    // checking if the smallest element is even or odd
+    bool evenFlag = false;
+    if(arr[0]%2==0){
+        // hence Print Even-Odd Pattern
+
+        evenFlag = true; // if smallest flag is even then add 1st element as Even (in our final array [as even-odd pattern])
+
+    }
+    else{
+        // hence Print Odd-Even Pattern
+    }
+
+    // create a sorted array
+
+    int i=0,j=0;
+
+    for(int k=0;k<n;k++){
+        if(evenFlag){
+            arr[k] = even[i];
+            i++;
+            evenFlag = false;  // here we just toggle the flag so that we can print odd next
+        }
+
+        else{
+            arr[k] = odd[j];
+            j++;
+            evenFlag = true;  // here we just toggle the flag so that we can print even next 
+        }
+    }
+
+    // print the pattern
+    for(int k=0;k<n;k++){
+        cout<<arr[k]<<" ";
+    }
+
+    return 0;
+}
