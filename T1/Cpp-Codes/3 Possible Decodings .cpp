@@ -39,6 +39,8 @@ void generateDecoding(char *inp, char *out, int i, int j)
     int digit = inp[i] - '0'; // subtracting our character value from 0 gives us the integer value from the character value.
                               // eg: '2' - '0' = 50-48 = 2
 
+    if(digit!=0){ // important : the 1st digit must not be zero
+
     // 1.2 map the ith digit to its character
     char ch = digit + 'A' - 1; // 1 + 'A' -1 = 1+65-1 =65 = 'A'
                                // 2 + 'A' -1 = 2+65-1 =66 = 'B'
@@ -72,6 +74,7 @@ void generateDecoding(char *inp, char *out, int i, int j)
             generateDecoding(inp, out, i + 2, j + 1);
         }
     }
+}
 }
 
 int main()
