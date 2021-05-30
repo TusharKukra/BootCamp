@@ -12,8 +12,8 @@ Output: e
 Decrypted string is "ababababccccccccccccededed"
   
 
-// Code :
-
+// Code : 1
+  
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -80,6 +80,7 @@ int main(){
     return 0;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Code : 2
 
