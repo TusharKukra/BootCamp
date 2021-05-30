@@ -79,3 +79,60 @@ int main(){
 
     return 0;
 }
+
+
+// Code : 2
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// kth character of decrypted string
+
+char* characterAt(char* input1, int input2){
+
+    char ch[100];
+    char *c;
+    char freq[1];
+
+    ch[0] = input1[0];
+
+    int j = 1, i=1, l;
+
+    for(;;){
+        if(input1[i] == '\0'){  // if string is empty
+            break;
+        }
+
+        if(input1[i] != 49){
+            if(input1[i] >= 50 && input1[i] <= 57){
+
+                l = input1[i] - 48;
+
+                for(int k = 1; k<l ;k++){
+                    ch[j] = input1[i-1];
+                    j++;
+                }
+            }
+
+            else{
+                ch[j] = input1[i];
+                j++;
+            }
+
+            i++;
+            continue;
+        }
+        i++;
+    }
+
+    ch[j] = '\0';
+    if(input2 > j){
+        return "-1";
+    }
+
+    freq[0] = ch[input2 -1];
+    freq[1] = '\0';
+    c = freq;
+
+    return strdup(c);
+}
